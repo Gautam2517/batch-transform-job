@@ -7,10 +7,11 @@ model_name = 'pipelines-emjhj52r2i60-CreateModel-uaSTQQCHqS'
 instance_type = 'ml.m5.large'
 job_name = 'trail_job'
 
-# Specify AWS credentials
-aws_access_key_id = 'AKIAYFSXQ23HHOFCROMV'
-aws_secret_access_key = 'FgO1vOcuFNrneBExMuGvbRkzCmQNl4l10KOHudtc'
-aws_region = 'us-east-1'
+# In .env
+AWS_ACCESS_KEY_ID=your-access-key-id
+AWS_SECRET_ACCESS_KEY=your-secret-access-key
+AWS_DEFAULT_REGION=your-region
+
 
 # Create a SageMaker client with specified credentials
 sagemaker = boto3.client('sagemaker',
