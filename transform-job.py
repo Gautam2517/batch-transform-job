@@ -29,15 +29,15 @@ transform_output = {
 
 # Specify the parameters for the Batch Transform job
 transform_job_params = {
-    'TransformJobName': trail-job,
-    'ModelName': rf_model,
+    'TransformJobName': 'trail-job',
+    'ModelName': 'rf_model',
     'MaxConcurrentTransforms': 1,
     'MaxPayloadInMB': 6,
     'BatchStrategy': 'MultiRecord',
     'TransformInput': 's3://data-science--bucket/Churn-Model-Data/test.csv',
     'TransformOutput': 's3://data-science--bucket/Churn-Model-Data/predictions.csv',
     'TransformResources': {
-        'InstanceType': ml.m5.large,
+        'InstanceType': 'ml.m5.large',
         'InstanceCount': 1,
     }
 }
