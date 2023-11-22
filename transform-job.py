@@ -24,7 +24,7 @@ transform_input = {
 
 # Specify the output configuration
 transform_output = {
-    'S3OutputPath': s3://data-science--bucket/Churn-Model-Data/predictions.csv,
+    'S3OutputPath': 's3://data-science--bucket/Churn-Model-Data/predictions.csv'
 }
 
 # Specify the parameters for the Batch Transform job
