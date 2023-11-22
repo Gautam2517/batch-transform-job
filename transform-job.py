@@ -36,14 +36,10 @@ transform_job_params = {
     'BatchStrategy': 'MultiRecord',
     'TransformInput': 's3://data-science--bucket/Churn-Model-Data/test.csv',
     'TransformOutput': 's3://data-science--bucket/Churn-Model-Data/predictions.csv',
-    'TransformResources': {
-        'InstanceType': 'ml.m5.large',
-        'InstanceCount': 1,
-    }
-}
-
-# Create the Batch Transform job
-sagemaker.create_transform_job(**transform_job_params)
-
-print(f"Batch Transform job '{job_name}' created successfully.")
+    'TransformResources':{
+~
+~
+~
+~
+~
 
