@@ -1,6 +1,6 @@
 import boto3
 
-# Replace these values with your actual information
+# Specify the required values
 s3_input_path = 's3://data-science--bucket/Churn-Model-Data/test.csv'
 s3_output_path = 's3://data-science--bucket/Churn-Model-Data/predictions.csv'
 model_name = 'pipelines-emjhj52r2i60-CreateModel-uaSTQQCHqS'
