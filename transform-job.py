@@ -15,7 +15,7 @@ transform_input = {
     'DataSource': {
         'S3DataSource': {
             'S3DataType': 'S3Prefix',
-            'S3Uri': s3://data-science--bucket/Churn-Model-Data/test.csv
+            'S3Uri': 's3://data-science--bucket/Churn-Model-Data/test.csv'
         }
     },
     'ContentType': 'text/csv',
