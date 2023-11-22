@@ -8,7 +8,7 @@ instance_type = 'ml.m5.large'
 job_name = 'trail-job'
 
 # Create a SageMaker client
-sagemaker = boto3.client('sagemaker')
+sagemaker = sagemaker = boto3.client('sagemaker', region_name='us-east-1')
 
 # Specify the input configuration
 transform_input = {
