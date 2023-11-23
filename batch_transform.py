@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import boto3
 
 # Load environment variables from .env file
-#load_dotenv()
+load_dotenv()
 
 # from dotenv import load_dotenv
 import boto3
@@ -16,6 +16,12 @@ S3_OUTPUT_PATH = os.getenv("S3_OUTPUT_PATH")
 MODEL_NAME = os.getenv("MODEL_NAME")
 INSTANCE_TYPE = os.getenv("INSTANCE_TYPE")
 JOB_NAME = os.getenv("JOB_NAME")
+
+print(f"S3_INPUT_PATH: {S3_INPUT_PATH}")
+print(f"S3_OUTPUT_PATH: {S3_OUTPUT_PATH}")
+print(f"MODEL_NAME: {MODEL_NAME}")
+print(f"INSTANCE_TYPE: {INSTANCE_TYPE}")
+print(f"JOB_NAME: {JOB_NAME}")
 
 # Create an S3 client
 s3 = boto3.client('s3')
