@@ -1,0 +1,54 @@
+name: "Sagemaker endpoints creation"
+
+description: "Sagemaker endpoints creation"
+inputs:
+  instance_type:
+    description: Instance type for inference
+    required: true
+    type: string
+  project:
+    description: Sagemaker Model Name
+    required: true
+    type: string
+  group_name:
+    description: Team or group name for charging
+    required: true
+    type: string
+  docker_image:
+    description: Docker image for inferenceing
+    required: true
+    type: string
+author: ramesh.kumar@ascentt.com
+branding:
+  icon: "file"
+  color: "white"
+
+runs:
+  using: "composite"
+  steps:
+    # - name: Checkout
+    #   uses: actions/checkout@v4
+    #   with:
+    #     repository: Ascentt-Business-Systems/sgm_endpoint_action
+    #     token: ${{secrets.PAT}}} 
+    # #- id: git_clone_and_checkout
+    #  # shell: bash
+    #  # run: git clone https://${{ secrets.PAT_TOKEN }}@github.com/Ascentt-Business-Systems/sgm_endpoint_action.git; cd sgm_endpoint_action; git checkout
+    - id: generating_inputs
+      shell: bash
+      run: touch var.tfvars; echo 'instance_type="${{ inputs.instance_type }}"' >> terraform.tfvars ; echo 'project="${{ inputs.project }}"' >> terraform.tfvars;echo 'group_name="${{ inputs.group_name }}"' >> terraform.tfvars;echo 'image="${{ inputs.docker_image }}"' >> terraform.tfvars; cat terraform.tfvars
+    - id: terraform_init
+      shell: bash
+      run: terraform init
+    - id: terraform_format
+      shell: bash
+      run: terraform fmt
+    - id: terraform_validate
+      shell: bash
+      run: terraform validate
+    - id: terraform_plan
+      shell: bash
+      run: terraform plan  -var-file "terraform.tfvars"
+    - id: terraform_Destroy
+      shell: bash
+      run: terraform destroy -auto-approve
