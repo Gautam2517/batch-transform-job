@@ -5,13 +5,10 @@ from dotenv import load_dotenv
 import boto3
 
 # Load environment variables from .env file
-load_dotenv()
+#load_dotenv()
 
 # from dotenv import load_dotenv
 import boto3
-
-# Load environment variables from .env file
- load_dotenv()
 
 # Access environment variables
 S3_INPUT_PATH = os.getenv("S3_INPUT_PATH")
