@@ -19,9 +19,7 @@ S3_OUTPUT_PATH = os.getenv("S3_OUTPUT_PATH")
 MODEL_NAME = os.getenv("MODEL_NAME")
 INSTANCE_TYPE = os.getenv("INSTANCE_TYPE")
 JOB_NAME = os.getenv("JOB_NAME")
-AWS_ACCESS_KEY_ID = ("your-access-key-id")
-AWS_SECRET_ACCESS_KEY = ("your-secret-access-key")
-AWS_DEFAULT_REGION = os.gentenv("your-region")
+
 # Create an S3 client
 s3 = boto3.client('s3')
 
