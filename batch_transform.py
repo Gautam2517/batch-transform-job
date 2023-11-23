@@ -40,7 +40,7 @@ transform_input = {
 # Specify the output configuration
 #transform_output = {
  #   'S3OutputPath': S3_OUTPUT_PATH,
-}
+#}
 
 # Specify the parameters for the Batch Transform job
 #transform_job_params = {
@@ -54,8 +54,8 @@ transform_input = {
     #'TransformResources': {
      #   'InstanceType': INSTANCE_TYPE,
       #  'InstanceCount': 1,
-    }
-}
+    #}
+#}
 
 # Create the Batch Transform job
 #sagemaker = boto3.client('sagemaker')
