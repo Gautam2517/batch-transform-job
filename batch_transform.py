@@ -63,7 +63,6 @@ sagemaker.create_transform_job(**transform_job_params)
 
 # Customize the success message or add additional logic here
 print(f"Batch Transform job '{JOB_NAME}' created successfully.")
-=======
 # S3_OUTPUT_PATH = os.getenv("S3_OUTPUT_PATH")
 # MODEL_NAME = os.getenv("MODEL_NAME")
 # INSTANCE_TYPE = os.getenv("INSTANCE_TYPE")
