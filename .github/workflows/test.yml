@@ -1,4 +1,4 @@
-name: 'Terraform GitHub Actions'
+name: 'Batch Transform GitHub Actions'
 on:
   workflow_dispatch:
   #push:
@@ -6,8 +6,8 @@ on:
   #pull_request:
 
 jobs:
-  terraform:
-    name: 'Terraform'
+  Sagemaker batch transform:
+    name: 'Sagemaker batch transform'
     runs-on: ubuntu-22.04
 
     steps:
@@ -22,7 +22,6 @@ jobs:
           aws-region: us-east-1  # or your preferred AWS region
 
 
-      - name: 'Set up Terraform'
-        uses: ./     
-        with:
-          instance_type_var: ml.c5.xlarge
+      - name: 'Deploying batch transform job'
+        uses: ./action.yml     
+        
