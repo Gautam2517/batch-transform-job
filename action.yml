@@ -1,4 +1,4 @@
-name: "Sagemaker batch transform job"
+name: "Sagemaker_batch_transform_job"
 
 description: "Sagemaker batch transform job"
 author: gowtam.degapudi@ascentt.com

@@ -1,4 +1,4 @@
-name: 'Batch Transform GitHub Actions'
+name: 'Batch_Transform_GitHub_Actions'
 on:
   workflow_dispatch:
   #push:
@@ -6,8 +6,8 @@ on:
   #pull_request:
 
 jobs:
-  Sagemaker batch transform:
-    name: 'Sagemaker batch transform'
+  Sagemaker_batch_transform:
+    name: 'Sagemaker_batch_transform'
     runs-on: ubuntu-22.04
 
     steps:
