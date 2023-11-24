@@ -22,9 +22,6 @@ jobs:
           aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}  
           aws-region: us-east-1  # or your preferred AWS region
 
-      
-    steps:
-      - uses: actions/checkout@v1
       - name: 'Deploying batch transform job'
         uses: ./
         
